@@ -12,7 +12,7 @@ Para executar este projeto corretamente, siga os passos abaixo.
 
 2. **Banco de Dados**  
    - O Entity Framework Core já está configurado para **SQL Server**.  
-   - **Não é necessário executar migrations**, pois o banco já está estruturado.  
+   - **Não é necessário executar migrations**, pois a estruturação do banco é feita de forma automatica.  
 
 ### 🚀 Tecnologias Utilizadas  
 - **.NET Core / .NET**  
