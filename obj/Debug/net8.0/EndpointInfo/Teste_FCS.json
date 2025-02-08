@@ -1,0 +1,101 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Teste_FCS",
+    "version": "1.0"
+  },
+  "paths": {
+    "/TesteCon": {
+      "get": {
+        "tags": [
+          "Livro"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Livro/Livros/ListarTodos": {
+      "get": {
+        "tags": [
+          "Livro"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Livro/Adicionar": {
+      "post": {
+        "tags": [
+          "Livro"
+        ],
+        "parameters": [
+          {
+            "name": "Nome",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Autor",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Editora",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Ano",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Resumo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Livro/Alterar": {
+      "put": {
+        "tags": [
+          "Livro"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}

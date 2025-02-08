@@ -1,0 +1,6 @@
+@Teste_FCS_HostAddress = http://localhost:5119
+
+GET {{Teste_FCS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

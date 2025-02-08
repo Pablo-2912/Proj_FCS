@@ -1,0 +1,68 @@
+[
+  {
+    "ContainingType": "Teste_FCS.Controllers.LivroController",
+    "Method": "Adicionar",
+    "RelativePath": "api/Livro/Adicionar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Nome",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Autor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Editora",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ano",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Resumo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Teste_FCS.Controllers.LivroController",
+    "Method": "Alterar",
+    "RelativePath": "api/Livro/Alterar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Teste_FCS.Controllers.LivroController",
+    "Method": "ListarLivros",
+    "RelativePath": "api/Livro/Livros/ListarTodos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Teste_FCS.Controllers.LivroController",
+    "Method": "Teste",
+    "RelativePath": "TesteCon",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
