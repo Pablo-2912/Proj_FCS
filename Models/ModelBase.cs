@@ -14,5 +14,6 @@ namespace Teste_FCS.Models
 
         [Required]
         public DateTime DataAlteraco { get; set; } = DateTime.Now;
+
     }
 }

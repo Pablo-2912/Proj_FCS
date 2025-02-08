@@ -25,6 +25,7 @@ namespace Teste_FCS.Dto
 
         public class LivroUpdateDTO
         {
+            [Required]
             public int Id { get; set; }
 
             public string Nome { get; set; }

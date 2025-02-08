@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Teste_FCS.Context;
 using Teste_FCS.Models;
 using Teste_FCS.Negocio.Livro;
@@ -26,6 +27,7 @@ namespace Teste_FCS.Controllers
 
             return a ? Ok() : BadRequest(new { message = "não conectou ao bd"});
         }
+
         [HttpGet]
         [Route("Livros/ListarTodos")]
         public async Task<IActionResult> ListarLivros()
@@ -41,16 +43,61 @@ namespace Teste_FCS.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(new { message = "parametro(s) inválido(s) ou não informado(s)."});
 
-            await _livroService.AdicionarAsync( new LivroModel(model));
+            await _livroService.AdicionarAsync(new LivroModel(model));
 
             return Ok();
         }
 
         [HttpPut]
         [Route("Alterar")]
-        public async Task<IActionResult> Alterar()
+        public async Task<IActionResult> Alterar(LivroUpdateDTO model)
         {
-            return Ok();
+            if (!ModelState.IsValid)
+                return BadRequest(new { message = "Informe o id."});
+
+            var livro = await db.Livros?.FirstOrDefaultAsync(x => x.id.Equals(model.Id));
+
+            if(livro is null)
+                return BadRequest(new { message = "Livro não encontrado."});
+
+            var livroAtualizado = new LivroModel()
+            {
+                id = model.Id,
+                Nome = model.Nome ?? livro.Nome,
+                Autor = model.Autor ?? livro.Autor,
+                Editora = model.Editora ?? livro.Editora,
+                Ano = model.Ano > 0 ? model.Ano : livro.Ano,
+                Resumo = model.Resumo ?? livro.Resumo
+            };
+
+            // Chama o serviço para editar
+            await _livroService.EditarAsync(livroAtualizado);
+
+            return Ok(new { message = "Dados do livro modificado." });
+        }
+
+        [HttpDelete]
+        [Route("Apagar/{id}")]
+        public async Task<IActionResult> Apagar(int? id)
+        {
+            if (id is null)
+                return BadRequest(new { message = "Id fornecido é nulo." });
+
+            await _livroService.ExcluirAsync((int)id);
+
+            return Ok(new { Message = "Livro excluido com sucesso. " });
+        }   
+        
+        [HttpGet]
+        [Route("Search/{termo}")]
+        public async Task<IActionResult> BuscarPorTituloEAutor(string termo)
+        {
+            if (termo is null)
+                return BadRequest(new { message = "Termo fornecido é nulo ou vazio." });
+
+            var response = await _livroService.BuscarPorNomeAutorEditoraAsync(termo);
+
+            return Json(response);
         }
     }
 }

@@ -170,3 +170,4 @@ C:\Users\soap\source\repos\Teste_FCS\Teste_FCS\bin\Debug\net8.0\runtimes\win\lib
 C:\Users\soap\source\repos\Teste_FCS\Teste_FCS\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\soap\source\repos\Teste_FCS\Teste_FCS\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\soap\source\repos\Teste_FCS\Teste_FCS\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\soap\source\repos\Teste_FCS\Teste_FCS\obj\Debug\net8.0\Teste_FCS.sourcelink.json
