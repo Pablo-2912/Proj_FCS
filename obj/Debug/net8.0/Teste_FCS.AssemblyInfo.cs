@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Teste_FCS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b31ca853ef1ae8ebc0e74b7d1dac00a41f9c2864")]
 [assembly: System.Reflection.AssemblyProductAttribute("Teste_FCS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Teste_FCS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
